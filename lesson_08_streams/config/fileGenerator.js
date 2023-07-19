@@ -16,6 +16,7 @@ async function fileGenerator(fileName, maxNumber){
 
         for(let i = 0; i < maxNumber; i++){
             fs.appendFileSync(path.join(__dirname, '..', 'textfolder', fileName), `Hello World ${i}\n`, "utf-8")
+            console.log(`completed line ${i}`)
         }
     }catch(error){
         console.log(`${error.name}:\t${error.message}`)
